@@ -19,7 +19,7 @@ function App() {
     try {
       setFetching(true)
       axios
-        .post("http://localhost:3000/ai", { platform, contentType, prompt, length })
+        .post("https://headlines-ai-api.vercel.app/ai", { platform, contentType, prompt, length })
         .then((res) => {
           setResponse(res.data);
           setFetching(false);
